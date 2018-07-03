@@ -17,3 +17,4 @@ selenium-debug.log
 *.sln
 other
 package-lock.json
+*.sh

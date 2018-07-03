@@ -13,7 +13,6 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "mock": "json-server src/mock/db.js --routes src/mock/route.json",
-    "mockdev": "npm run mock & npm run local"
   },
   "repository": {
     "type": "git",
