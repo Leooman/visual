@@ -12,7 +12,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "mock": "json-server src/mock/db.js --routes src/mock/route.json",
+    "mock": "json-server src/mock/db.js --routes src/mock/route.json"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^1.2.9",
+    "particles.js": "^2.0.0",
     "vue": "^2.2.6",
     "vue-router": "^3.0.1",
     "vuex": "^2.3.1"
