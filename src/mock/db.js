@@ -2,21 +2,16 @@ module.exports = function(){
   var faker =require("faker/locale/zh_CN");
   var _ = require("lodash");
   return {
-    people: _.times(100,function (n) {
+    user: _.times(10,function (n) {
       return {
         id: n,
-        name: faker.name.findName(),
+        user_name: faker.name.findName(),
         avatar: faker.internet.avatar(),
-        address: faker.address.city()
+        password: faker.internet.password()
       }
     }),
-    news: _.times(100,function(n){
-      return {
-        id:n,
-        title:faker.random.words(),
-        views:faker.random.number(),
-        images:faker.random.image()
-      }
-    })
+    login: {
+      status:200
+    }
   }
 }

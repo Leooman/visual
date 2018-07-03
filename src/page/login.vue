@@ -8,10 +8,10 @@
 		  		</div>
 		    	<el-form :model="loginForm" :rules="rules" ref="loginForm">
 					<el-form-item prop="username">
-						<el-input v-model="loginForm.username" placeholder="用户名"><span>dsfsf</span></el-input>
+						<el-input v-model="loginForm.username" placeholder="用户名" @keyup.enter.native="submitForm('loginForm')"></el-input>
 					</el-form-item>
 					<el-form-item prop="password">
-						<el-input type="password" placeholder="密码" v-model="loginForm.password"></el-input>
+						<el-input type="password" placeholder="密码" v-model="loginForm.password" @keyup.enter.native="submitForm('loginForm')"></el-input>
 					</el-form-item>
 					<el-form-item>
 				    	<el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登陆</el-button>
@@ -26,12 +26,14 @@
 	import {mapActions, mapState} from 'vuex'
 	import 'particles.js'
 	import config from '@/controller/login/bubble'
+	import {user,login} from '@/controller/api'
+	import {setStore} from '@/controller/common'
 	export default {
 	    data(){
 			return {
 				loginForm: {
-					username: '',
-					password: '',
+					username: null,
+					password: null,
 				},
 				rules: {
 					username: [
@@ -45,39 +47,53 @@
 			}
 		},
 		mounted(){
+			let _this=this
 			this.showLogin = true;
-			if (!this.adminInfo.id) {
-    			
-    		}
-    		this.getPeopleList()
     		particlesJS('login', config)
+    		user({
+    			id:0
+    		}).then(res => {
+    			if(res.status === 200){
+    				_this.loginForm.username=res.data[0].user_name
+    				_this.loginForm.password=res.data[0].password
+    			}
+    		}).catch(err => {
+    			console.log(err)
+    		})
 		},
 		computed: {
-			...mapState(['adminInfo']),
+			...mapState({
+				state : state => state
+			}),
 		},
 		methods: {
-			...mapActions(['getPeopleList']),
 			async submitForm(formName) {
+				let _this=this
 				this.$refs[formName].validate(async (valid) => {
 					if (valid) {
-						const res = await login({user_name: this.loginForm.username, password: this.loginForm.password})
-						if (res.status == 1) {
-							this.$message({
-		                        type: 'success',
-		                        message: '登录成功'
-		                    });
-							this.$router.push('manage')
-						}else{
-							this.$message({
-		                        type: 'error',
-		                        message: res.message
-		                    });
-						}
+						login({
+							userName: this.loginForm.username,
+							password: this.loginForm.password
+						}).then(res => {
+							if(res.status !== 404){
+								setStore('isLogin',true)
+								_this.isLogin=true
+								_this.$router.push('home')
+							}else{
+								_this.$message({
+			                        type: 'error',
+			                        message: res.msg
+			                    })
+							}
+						})
 					} else {
 						this.$notify.error({
-							title: '错误',
-							message: '请输入正确的用户名密码',
-							offset: 100
+							title: 'ERROR',
+							message: '用户名密码不能为空',
+							offset: 10,
+							timeout: 500,
+    						horizontalAlign: 'right',
+    						verticalAlign: 'top'
 						});
 						return false;
 					}

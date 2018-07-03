@@ -12,6 +12,11 @@ export default async(url , data , type = 'GET') => {
 				params:data
 			})
 			break;
+		case "POST":
+			return axios.post(url,{
+				data:data
+			})
+			break;
 		default:
 			// statements_def
 			break;

@@ -1,4 +1,6 @@
 import L from '@/config/axios'
 
-export const people = data => L('/api/people', data);
+export const user = data => L('/api/user', data);
+
+export const login = data => L('/api/login', data, "POST");
 
