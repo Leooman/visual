@@ -1,63 +1,36 @@
 <template>
-  <el-container>
-    <el-header>
-      <div class="logo-group" :style="logoGroupStyle">
-        <img v-if="collapse" src="@/assets/image/logo/header-icon-only.png">
-        <img v-else src="@/assets/image/logo/header.png">
-      </div>
-      <div class="toggle-sidemenu-btn" @click="toggleAside">
-        <Icon name="bars"></Icon>
-      </div>
-      <!-- <HeaderMenu></HeaderMenu> -->
-      <!-- <HeaderRight></HeaderRight> -->
-    </el-header>
-    <el-container>
-      <el-aside :style="asideStyle">
-        <!-- <SideMenu :collapse="collapse"></SideMenu> -->
-      </el-aside>
-      <el-main>
-        <transition name="fade-transverse">
-          <router-view></router-view>
-        </transition>
-      </el-main>
-    </el-container>
-  </el-container>
+  <userInfo :userInfo="userInfo"></userInfo>
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   components: {
-    // SideMenu: () => import('../components/SideMenu'),
-    // HeaderMenu: () => import('../components/HeaderMenu'),
-    // HeaderRight: () => import('../components/HeaderRight')
+    userInfo: () => import('../components/home/userInfo'),
   },
   data () {
     return {
-      theme: 'default',
-      collapse: false
+      
     }
   },
   computed: {
-    logoGroupStyle () {
-      return {
-        width: `${this.collapse ? '65' : '200'}px`
-      }
-    },
-    asideStyle () {
-      return {
-        width: `${this.collapse ? '65' : '200'}px`
-      }
-    }
+    ...mapState({
+      userInfo:state => state.userInfo
+    })
   },
   methods: {
-    toggleAside () {
-      this.collapse = !this.collapse
-    }
+    
   }
 }
 </script>
 
 <style lang="less" scoped>
-
+  .el-card{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 </style>
 

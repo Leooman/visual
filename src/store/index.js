@@ -4,7 +4,8 @@ import {setStore,getStore} from '@/controller/common'
 Vue.use(Vuex)
 
 const state = {
-	isLogin:false
+	isLogin:false,
+	userInfo:{}
 }
 
 const mutations = {

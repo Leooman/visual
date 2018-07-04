@@ -44,6 +44,7 @@
 					],
 				},
 				showLogin: false,
+				userData:{}
 			}
 		},
 		mounted(){
@@ -54,8 +55,10 @@
     			id:0
     		}).then(res => {
     			if(res.status === 200){
-    				_this.loginForm.username=res.data[0].user_name
-    				_this.loginForm.password=res.data[0].password
+    				let user=res.data[0]
+    				Object.assign(_this.userData,user)
+    				_this.loginForm.username=user.user_name
+    				_this.loginForm.password=user.password
     			}
     		}).catch(err => {
     			console.log(err)
@@ -77,7 +80,9 @@
 						}).then(res => {
 							if(res.status !== 404){
 								setStore('isLogin',true)
-								_this.isLogin=true
+								setStore('userInfo',_this.userData)
+    							_this.state.userInfo=Object.assign(_this.userData)
+								_this.state.isLogin=true
 								_this.$router.push('home')
 							}else{
 								_this.$message({
