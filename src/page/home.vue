@@ -25,12 +25,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  .el-card{
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+  
 </style>
 
