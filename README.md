@@ -1,7 +1,7 @@
 Vadmin `vue基础项目模板`
 =====
 
-## 项目概述
+## 项目概述:coffee:
 
 [Vadmin](https://github.com/Leooman/Vadmin) 是一套基于vue2.0的基础前后端分离项目模板，内部集成`vue-router`路由管理，`axios`http请求库，`vuex`状态管理，`element-ui`组件库，基于`webpack`模块管理，支持`ES6`语法
 
@@ -39,54 +39,61 @@ npm run build
 `master`分支只提供最基础的项目架构，如需添加布局结构，需求功能，请自行创建其他分支。项目结构：
 
 ```
-www  WEB部署目录（或者子目录）
-├─application           应用目录
-│  ├─common             公共模块目录（可以更改）
-│  ├─module_name        模块目录
-│  │  ├─config.php      模块配置文件
-│  │  ├─common.php      模块函数文件
-│  │  ├─controller      控制器目录
-│  │  ├─model           模型目录
-│  │  ├─view            视图目录
-│  │  └─ ...            更多类库目录
+├─src                   项目应用目录
+│  ├─assets             静态资源目录
+│  ├─components         组件目录
+│  ├─config             项目配置目录
+│  │  ├─axios.js        axios http请求公用文件
+│  │  └─env.js          项目环境配置文件
 │  │
-│  ├─command.php        命令行工具配置文件
-│  ├─common.php         公共函数文件
-│  ├─config.php         公共配置文件
-│  ├─route.php          路由配置文件
-│  ├─tags.php           应用行为扩展定义文件
-│  └─database.php       数据库配置文件
-│
-├─public                WEB目录（对外访问目录）
-│  ├─index.php          入口文件
-│  ├─router.php         快速测试文件
-│  └─.htaccess          用于apache的重写
-│
-├─thinkphp              框架系统目录
-│  ├─lang               语言文件目录
-│  ├─library            框架类库目录
-│  │  ├─think           Think类库包目录
-│  │  └─traits          系统Trait目录
+│  ├─controller         项目控制器目录
+│  │  ├─api.js          后台接口统一调用文件
+│  │  └─common.js       项目共用方法文件
 │  │
-│  ├─tpl                系统模板目录
-│  ├─base.php           基础定义文件
-│  ├─console.php        控制台入口文件
-│  ├─convention.php     框架惯例配置文件
-│  ├─helper.php         助手函数文件
-│  ├─phpunit.xml        phpunit配置文件
-│  └─start.php          框架入口文件
+│  ├─mock               模拟测试数据目录
+│  ├─page               项目页面目录
+│  ├─router             路由配置目录
+│  ├─store              vuex状态管理目录
+│  ├─style              项目公用样式目录
+│  ├─App.vue            项目入口页面
+│  └─main.js            项目入口文件
 │
-├─extend                扩展类库目录
-├─runtime               应用的运行时目录（可写，可定制）
-├─vendor                第三方类库目录（Composer依赖库）
-├─build.php             自动生成定义文件（参考）
-├─composer.json         composer 定义文件
-├─LICENSE.txt           授权说明文件
-├─README.md             README 文件
-├─think                 命令行入口文件
-├─message.sql           数据库备份文件
+├─build                 webpack项目配置目录
+│  ├─build.js           项目打包入口文件
+│  ├─check-versions.js  模块版本检测文件
+│  ├─dev-client.js      本地开发热部署配置
+│  ├─dev-server.js      本地开发服务文件
+│  ├─utils.js           webpack plugin配置文件
+│  ├─vue-loader.conf.js   项目loaders调用配置
+│  ├─webpack.base.conf.js webpack基础配置
+│  ├─webpack.dev.conf.js  webpack本地开发配置
+│  ├─webpack.prod.conf.js webpack生产配置
+│  └─webpack.test.conf.js webpack测试配置
+│
+├─config                开发配置目录
+│  ├─dev.env.js         本地环境配置
+│  ├─index.js           命令运行参数配置
+│  ├─prod.env.js        生产环境配置
+│  └─test.env.js        测试环境配置
+│
+├─static                静态文件(build时直接复制到项目目录,不会被webpack打包处理)
+│
+├─test                  测试目录
+│  ├─e2e                端到端测试目录
+│  └─unit               单元测试目录
+│
+├─.babelrc
+├─.editorconfig
+├─.eslintignore
+├─.eslintrc.js
+├─.gitignore
+├─.postcssrc.js
+├─index.html
+├─LICENSE
+├─package.json
+├─README.md
 ```
 
-## 贡献
+## 贡献:slightly_smiling_face:
 
 如果你有好的建议或功能，欢迎提`issue`或`pull request`。
