@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {setStore,getStore} from '@/controller/common'
+import {setStore,getStore} from '@/controller/utils'
 Vue.use(Vuex)
 
 const state = {

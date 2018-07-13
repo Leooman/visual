@@ -2,13 +2,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/'
-import ElementUI from 'element-ui'
-import { Message } from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css'
+// 引入插件
+import './plugins'
 
 Vue.config.productionTip = false;
-
-Vue.use(ElementUI);
 
 router.beforeEach((to,from,next) => {
 	// if(to.matched.some( m => m.meta.auth)){

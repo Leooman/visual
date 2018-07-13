@@ -27,7 +27,7 @@
 	import 'particles.js'
 	import config from '@/controller/login/bubble'
 	import {user,login} from '@/controller/api'
-	import {setStore} from '@/controller/common'
+	import {setStore} from '@/controller/utils'
 	export default {
 	    data(){
 			return {

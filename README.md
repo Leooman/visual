@@ -48,10 +48,11 @@ npm run build
 │  │
 │  ├─controller         项目控制器目录
 │  │  ├─api.js          后台接口统一调用文件
-│  │  └─common.js       项目共用方法文件
+│  │  └─utils.js        项目共用方法文件
 │  │
 │  ├─mock               模拟测试数据目录
 │  ├─page               项目页面目录
+│  ├─plugins            插件目录
 │  ├─router             路由配置目录
 │  ├─store              vuex状态管理目录
 │  ├─style              项目公用样式目录
