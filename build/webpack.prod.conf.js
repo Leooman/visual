@@ -12,7 +12,7 @@ var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
-env.HOST=process.env.npm_config_iot ? '"iot"' : '""'
+env.HOST=process.env.npm_config_vadmin ? '"vadmin"' : '""'
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
