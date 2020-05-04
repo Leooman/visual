@@ -1,4 +1,4 @@
-# sub-vue
+# Vadmin
 
 ## Project setup
 ```

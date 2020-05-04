@@ -20,7 +20,7 @@ html, body, #app {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: url(./assets/bg.png);
+  background: url(http://qiniu.leooman.com/bg.png);
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
