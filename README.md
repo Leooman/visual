@@ -1,6 +1,9 @@
 # Vadmin
 
+:package:A project created by vue-cli-3 can be deployed independently or as a sub app in micro-frontends use qiankun
+
 ## Project setup
+
 ```
 yarn install
 ```
@@ -15,15 +18,9 @@ yarn run serve
 yarn run build
 ```
 
-### Run your tests
+### Deploy to gh-pages
+
 ```
-yarn run test
+yarn run deploy
 ```
 
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
