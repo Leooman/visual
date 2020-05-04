@@ -1,0 +1,26 @@
+@itemColor:#17E1E6;
+
+.animate(@deg,@left,@right,@top,@bottom,@t:0){
+	animation: item 1s @t ease infinite;
+	-moz-animation: item 1s @t ease infinite;
+	/* Firefox */
+	-webkit-animation: item 1s @t ease infinite;
+	/* Safari and Chrome */
+	-o-animation: item 1s @t ease infinite;
+	/* Opera */
+
+	transform: rotate(@deg);
+	left: @left;
+	right: @right;
+	top: @top;
+	bottom: @bottom;
+}
+
+@keyframes item {
+  	0% {}
+  	50% {
+	    background: none;
+	    box-shadow: inset 0vw 0vw 0vw .1vw @itemColor, 0vw 0vw 1.5vw 0vw @itemColor;
+	}
+	100% {}
+}
