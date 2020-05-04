@@ -1,0 +1,2 @@
+(window["webpackJsonp_sub-vue"]=window["webpackJsonp_sub-vue"]||[]).push([["fail"],{"8cdb":function(e,n,u){"use strict";u.r(n);var t=function(){var e=this,n=e.$createElement,u=e._self._c||n;return u("div",[e._v("404")])},l=[],s=u("2877"),c={},a=Object(s["a"])(c,t,l,!1,null,null,null);n["default"]=a.exports}}]);
+//# sourceMappingURL=fail.40a5c585.js.map
