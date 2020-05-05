@@ -8,7 +8,7 @@ function resolve(dir) {
 const port = 8081
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/Vadmin',
+  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/visual',
   outputDir: 'dist',
   assetsDir: 'static',
   filenameHashing: true,

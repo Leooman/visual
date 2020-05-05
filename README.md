@@ -1,4 +1,4 @@
-# Vadmin
+# visual
 
 :package:A project created by vue-cli-3 can be deployed independently or as a sub app in micro-frontends use qiankun
 
