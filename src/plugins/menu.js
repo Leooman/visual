@@ -5,6 +5,9 @@ export default [{
     label: "ThreeJs",
     path: "",
     children: [{
+        label: "GET STARTED",
+        path: "start"
+    }, {
         label: "GLTFLoader",
         path: "GLTFLoader"
     }]

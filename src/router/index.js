@@ -1,4 +1,4 @@
-import Leaflet from '../views/Leaflet.vue'
+import Leaflet from '../views/leaflet/Leaflet.vue'
 
 const routes = [
   {
@@ -7,9 +7,14 @@ const routes = [
     component: Leaflet
   },
   {
+    path: '/start',
+    name: 'start',
+    component: () => import(/* webpackChunkName: "start" */ '../views/threejs/start.vue')
+  },
+  {
     path: '/GLTFLoader',
     name: 'GLTFLoader',
-    component: () => import(/* webpackChunkName: "GLTFLoader" */ '../views/GLTFLoader.vue')
+    component: () => import(/* webpackChunkName: "GLTFLoader" */ '../views/threejs/GLTFLoader.vue')
   }
 ]
 
