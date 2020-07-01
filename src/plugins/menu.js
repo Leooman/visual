@@ -1,21 +1,21 @@
 export default [{
-    label: "Gojs",
-    path: "/Gojs",
+    label: "GOJS",
+    path: "GOJS",
     children: [{
         label: "GET STARTED",
         path: "gojs"
     }]
 },{
-    label: "Leaflet",
-    path: "/"
+    label: "LEAFLET",
+    path: "leaflet"
 }, {
-    label: "ThreeJs",
-    path: "/ThreeJs",
+    label: "THREEJS",
+    path: "THREEJS",
     children: [{
-        label: "GET STARTED",
+        label: "STARTED",
         path: "start"
     }, {
-        label: "GLTFLoader",
+        label: "GLTFLOADER",
         path: "GLTFLoader"
     }]
 }]

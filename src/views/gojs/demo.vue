@@ -1,19 +1,19 @@
 <template>
-  <div style="width: 60%;">
+  <div class="diagram">
     <diagram
       ref="diag"
       :model-data="diagramData"
       @model-changed="modelChanged"
       @changed-selection="changedSelection"
-      style="border: solid 1px black; width:100%; height:200px"
     ></diagram>
-    <button @click="addNode">Add Child to Gamma</button>
-    <button @click="modifyStuff">Modify view model data without undo</button>
-    <br />Current Node:
-    <input v-model.lazy="currentNodeText" :disabled="currentNode === null" />
-    <br />The saved GoJS Model:
-    <!--<textarea style='width:100%;height:250px'>{{ savedModelText }}</textarea>-->
-    <textarea style="width:100%;height:200px" v-model="savedModelText"></textarea>
+    <div class="footer">
+        <button @click="addNode">Add Child to Gamma</button>
+        <button @click="modifyStuff">Modify view model data without undo</button>
+        Current Node:
+        <input v-model.lazy="currentNodeText" :disabled="currentNode === null" />
+        <br />The saved GoJS Model:
+        <textarea style="width:100%;height:200px" v-model="savedModelText"></textarea>
+    </div>
   </div>
 </template>
 
@@ -133,4 +133,9 @@ export default {
 </script>
 
 <style>
+.diagram{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 </style>
