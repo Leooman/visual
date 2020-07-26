@@ -1,10 +1,13 @@
 export default [{
-    label: "GOJS",
-    path: "GOJS",
+    label: "DIAGRAM",
+    path: "DIAGRAM",
     children: [{
-        label: "GET STARTED",
+        label: "Gojs",
         path: "gojs"
-    }]
+    }, {
+            label: "LhnUI",
+            path: "diagram"
+        }]
 },{
     label: "LEAFLET",
     path: "leaflet"
