@@ -1,11 +1,21 @@
 export default [{
-    label: "Leaflet",
-    path: "/"
-}, {
-    label: "ThreeJs",
-    path: "",
+    label: "LhnUI",
+    path: "LhnUI",
     children: [{
-        label: "GLTFLoader",
-        path: "GLTFLoader"
+        label: "diagram",
+        path: "diagram"
+    }]
+}, {
+    label: "Leaflet",
+    path: "leaflet"
+}, {
+    label: "ThreeJS",
+    path: "threejs",
+    children: [{
+        label: "start",
+        path: "start"
+    }, {
+        label: "gltfLoader",
+        path: "gltfLoader"
     }]
 }]

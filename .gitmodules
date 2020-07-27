@@ -1,0 +1,3 @@
+[submodule "external/lhnui"]
+	path = external/lhnui
+	url = https://github.com/Leooman/LhnUI.git

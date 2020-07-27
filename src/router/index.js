@@ -1,15 +1,18 @@
-import Leaflet from '../views/Leaflet.vue'
+import home from '../views/home.vue'
+import Leaflet from './_leaflet'
+import LhnUI from './_lhnui'
+import Three from './_three'
 
 const routes = [
   {
-    path: '/',
-    name: 'Leaflet',
-    component: Leaflet
-  },
-  {
-    path: '/GLTFLoader',
-    name: 'GLTFLoader',
-    component: () => import(/* webpackChunkName: "GLTFLoader" */ '../views/GLTFLoader.vue')
+    path:'/',
+    component:home,
+    redirect:'/start',
+    children:[
+      ...Leaflet,
+      ...LhnUI,
+      ...Three
+    ]
   }
 ]
 
