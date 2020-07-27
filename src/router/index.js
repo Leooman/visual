@@ -1,16 +1,16 @@
 import home from '../views/home.vue'
 import Leaflet from './_leaflet'
-import Gojs from './_gojs'
+import LhnUI from './_lhnui'
 import Three from './_three'
 
 const routes = [
   {
     path:'/',
     component:home,
-    redirect:'/gojs',
+    redirect:'/start',
     children:[
       ...Leaflet,
-      ...Gojs,
+      ...LhnUI,
       ...Three
     ]
   }

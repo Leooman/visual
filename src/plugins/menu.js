@@ -1,24 +1,21 @@
 export default [{
-    label: "DIAGRAM",
-    path: "DIAGRAM",
+    label: "LhnUI",
+    path: "LhnUI",
     children: [{
-        label: "Gojs",
-        path: "gojs"
-    }, {
-            label: "LhnUI",
-            path: "diagram"
-        }]
-},{
-    label: "LEAFLET",
+        label: "diagram",
+        path: "diagram"
+    }]
+}, {
+    label: "Leaflet",
     path: "leaflet"
 }, {
-    label: "THREEJS",
-    path: "THREEJS",
+    label: "ThreeJS",
+    path: "threejs",
     children: [{
-        label: "STARTED",
+        label: "start",
         path: "start"
     }, {
-        label: "GLTFLOADER",
-        path: "GLTFLoader"
+        label: "gltfLoader",
+        path: "gltfLoader"
     }]
 }]
