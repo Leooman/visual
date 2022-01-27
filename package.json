@@ -28,7 +28,7 @@
     "gh-pages": "^2.2.0",
     "less": "^3.11.1",
     "less-loader": "^6.0.0",
-    "three": "^0.117.1",
+    "three": "^0.137.0",
     "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.6.11"
   },
